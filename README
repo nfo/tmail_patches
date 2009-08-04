@@ -3,9 +3,6 @@ I did not make a proper fork because TMail is not actively maintained anymore.
 
 Mikel Lindsaar, the project admin of TMail on RubyForge, now works on a very promising rewrite for Ruby 1.9.1, named Mail http://github.com/mikel/mail.
 
-Also, I won't commit any unit tests. The tests I coded are too linked to the project I'm working on.
-But I can ensure you that these patches get the job done :)
-
 I use rchardet http://rubyforge.org/projects/rchardet/ for encoding detection.
 
 To remove the dependency to activesupport, just replace 'alias_method_chain' calls by simple 'alias' calls.

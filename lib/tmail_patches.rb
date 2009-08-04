@@ -1,5 +1,8 @@
 require 'rubygems'
+
+gem 'tmail', '= 1.2.3.1'
 require 'tmail'
+
 require 'rchardet'
 require 'activesupport'
 
@@ -27,16 +30,16 @@ TMail::Mail.class_eval do
   
   # Returns true if this part's content main type is text, else returns false.
   # By main type is meant "text/plain" is text.  "text/html" is text
-  def content_type_is_text?
+  def text_content_type?
     self.header['content-type'] && (self.header['content-type'].main_type == 'text')
   end
   
   def inline_attachment?(part)
-    part['content-id'] || (part['content-disposition'] && part['content-disposition'].disposition == 'inline' && !part.content_type_is_text?)
+    part['content-id'] || (part['content-disposition'] && part['content-disposition'].disposition == 'inline' && !part.text_content_type?)
   end
   
   def attachment?(part)
-    part.disposition_is_attachment? || (!part.content_type.nil? && !part.content_type_is_text?) unless part.multipart? or inline_attachment?(part)
+    part.disposition_is_attachment? || (!part.content_type.nil? && !part.text_content_type?) unless part.multipart? or inline_attachment?(part)
   end
   
   def attachments
