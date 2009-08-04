@@ -1,7 +1,6 @@
 require File.join(File.dirname(__FILE__), 'test_helper')
-require File.join(File.dirname(__FILE__), '../lib/tmail_patches')
 
-class TMailPatchesTest < Test::Unit::TestCase
+class AttachmentsTest < Test::Unit::TestCase
 
   def setup
   end
