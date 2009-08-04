@@ -1,5 +1,4 @@
 This Ruby files patch some methods of TMail 1.2.3.1.
-I did not make a proper fork because TMail is not actively maintained anymore.
 
 Mikel Lindsaar, the project admin of TMail on RubyForge, now works on a very promising rewrite for Ruby 1.9.1, named Mail http://github.com/mikel/mail.
 
