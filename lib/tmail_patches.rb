@@ -3,6 +3,7 @@ require 'rubygems'
 gem 'tmail', '= 1.2.3.1'
 require 'tmail'
 
+require 'kconv'
 require 'rchardet'
 require 'activesupport'
 
